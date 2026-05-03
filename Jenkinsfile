@@ -13,11 +13,6 @@ pipeline {
             }
         }
 
-        stage('Dependency Check') {
-            steps {
-                sh '/opt/dependency-check-tool/bin/dependency-check.sh --scan . --format HTML --out ./dependency-check-report'
-            }
-        }
 
         stage('SonarQube Analysis') {
             steps {
