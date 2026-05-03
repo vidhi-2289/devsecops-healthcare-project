@@ -15,7 +15,8 @@ pipeline {
 
         stage('Dependency Check') {
             steps {
-            sh '/home/ec2-user/dependency-check-tool/bin/dependency-check.sh --scan . --format HTML --out ./dependency-check-report'            }
+                sh '/opt/dependency-check-tool/bin/dependency-check.sh --scan . --format HTML --out ./dependency-check-report'
+            }
         }
 
         stage('SonarQube Analysis') {
