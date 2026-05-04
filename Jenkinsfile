@@ -32,12 +32,11 @@ pipeline {
             }
         }
 
-        stage('Trivy Scan') {
-            steps {
-                sh 'trivy image $IMAGE_NAME'
-            }
-        }
-
+stage('Trivy Scan') {
+    steps {
+        sh 'trivy image --timeout 5m vidhi4941/devsecops-healthcare:latest'
+    }
+}
         stage('Push Docker Image') {
             steps {
                 sh 'docker push $IMAGE_NAME'
