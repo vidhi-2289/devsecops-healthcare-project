@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left-section">
+        <h1>Smart Healthcare System</h1>
+        <p>Book appointments and manage healthcare easily.</p>
+
+        <div class="stats">
+            <div class="card">250+ Doctors</div>
+            <div class="card">1500+ Patients</div>
+            <div class="card">98% Success</div>
+        </div>
+
+        <div class="doctors">
+            <h2>Our Specialists</h2>
+            <div class="doctor-list">
+                <div class="doctor-card">Cardiologist</div>
+                <div class="doctor-card">Neurologist</div>
+                <div class="doctor-card">Orthopedic</div>
+            </div>
+        </div>
+
+        <a href="/appointments" class="dashboard-btn">
+            View All Appointments
+        </a>
+    </div>
+
+    <div class="right-section">
+        <form action="/register" method="POST">
+            <h2>Patient Registration</h2>
+
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="number" name="age" placeholder="Age" required>
+
+            <select name="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <input type="text" name="phone" placeholder="Phone" required>
+
+            <textarea name="symptoms" placeholder="Symptoms"></textarea>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
