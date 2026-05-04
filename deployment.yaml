@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devsecops-app
+  name: devsecops-healthcare
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: devsecops-app
+      app: devsecops-healthcare
   template:
     metadata:
       labels:
-        app: devsecops-app
+        app: devsecops-healthcare
     spec:
       containers:
-      - name: devsecops-app
+      - name: healthcare-container
         image: vidhi4941/devsecops-healthcare:latest
         ports:
         - containerPort: 3002
