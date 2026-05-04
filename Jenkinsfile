@@ -13,7 +13,18 @@ pipeline {
             }
         }
 
-
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('sonarqube-server') {
+                    sh '''
+                    sonar-scanner \
+                    -Dsonar.projectKey=devsecops-healthcare \
+                    -Dsonar.sources=. \
+                    -Dsonar.host.url=http://localhost:9000
+                    '''
+                }
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
